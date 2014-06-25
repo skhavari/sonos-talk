@@ -1,0 +1,125 @@
+responsive-padding()
+  padding-top 20px
+  @media (min-width: 450px)
+    padding-top 40px
+  @media (min-width: 768px)
+    padding-top 60px
+  @media (min-width: 992px)
+    padding-top 80px
+  @media (min-width: 1200px)
+    padding-top 100px
+
+responsive-height()
+  height 40px
+  @media (min-width: 450px)
+    height 60px
+  @media (min-width: 768px)
+    height 80px
+  @media (min-width: 992px)
+    height 100px
+  @media (min-width: 1200px)
+    height 120px
+
+responsive-font()
+  font-size 16px
+  @media (min-width: 450px)
+    font-size 18px
+  @media (min-width: 768px)
+    font-size 20px
+  @media (min-width: 992px)
+    font-size 22px
+  @media (min-width: 1200px)
+    font-size 24px
+
+responsive-logo-width()
+  width 300px
+  height 60px
+  @media (min-width: 450px)
+    width 400px
+    height 76px
+  @media (min-width: 768px)
+    width 690px
+    height 131px
+  @media (min-width: 992px)
+    width 880px
+    height 167px
+  @media (min-width: 1200px)
+    width 938px
+    height 178px
+
+responsive-canvas-width()
+  width 150px
+  height 60px
+  @media (min-width: 450px)
+    width 200px
+    height 76px
+  @media (min-width: 768px)
+    width 345px
+    height 131px
+  @media (min-width: 992px)
+    width 440px
+    height 167px
+  @media (min-width: 1200px)
+    width 469px
+    height 178px
+
+responsive-cell-spacing()
+  padding 5px
+  @media (min-width: 450px)
+    padding 10px
+  @media (min-width: 768px)
+    padding 15px
+  @media (min-width: 992px)
+    padding 20px
+  @media (min-width: 1200px)
+    padding 30px
+
+responsive-border-spacing()
+  border-spacing 5px 0px
+  @media (min-width: 450px)
+    border-spacing 10px 0px
+  @media (min-width: 768px)
+    border-spacing 15px 0px
+  @media (min-width: 992px)
+    border-spacing 20px 0px
+  @media (min-width: 1200px)
+    border-spacing 30px 0px
+
+#banner
+  responsive-height()
+  padding-top 15px
+  background-color #202020
+  color white
+
+#header
+  responsive-padding()
+  .sonos-logo
+    background url("/sonos.jpg") no-repeat
+    background-size 100%
+    responsive-logo-width()
+
+.canvas-container
+  padding 0
+
+#viz-canvas
+  responsive-canvas-width()
+  opacity .3
+#viz-canvas-copy
+  responsive-canvas-width()
+  opacity .3
+  -webkit-transform scaleX(-1)
+    
+#commands
+  responsive-padding()
+  responsive-font()
+  table
+    width 100%
+
+td
+  background-color #d42536
+  color white
+  responsive-cell-spacing()
+
+table
+  border-collapse separate
+  responsive-border-spacing()

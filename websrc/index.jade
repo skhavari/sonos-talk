@@ -1,0 +1,28 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        meta(name="viewport", content="width=device-width")
+        title Sonos Talk
+        link(rel="shortcut icon", href="/favicon.ico")
+        link(href="/normalize.css", rel='stylesheet')
+        link(href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css", rel="stylesheet")
+        link(href="/style.css", rel='stylesheet')
+        script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.js')
+        script(src='/app.js')
+        script(src='/visualizer/visualizer.js')
+
+    body(ng-app="sonosTalkApp")
+
+        #banner.container-fluid
+
+        #header.container.text-center
+            .row
+                .col-xs-12
+                    .sonos-logo.center-block
+                        visualize-mic-audio
+
+        #commands.container.text-center(ng-controller="actionsCtrl")
+            table
+                tr
+                    td(ng-repeat="action in actions") {{ action }}
