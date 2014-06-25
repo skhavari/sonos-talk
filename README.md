@@ -1,4 +1,5 @@
-# Sonos Talk
+![Screenshot](https://raw.githubusercontent.com/skhavari/sonos-talk/master/websrc/assets/screenshot.png)
+
 Control Sonos with voice commands
 
 ### Status
