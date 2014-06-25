@@ -87,9 +87,17 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 187.0,
 		"selected_items":
 		[
+			[
+				"mark pre",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"mar pre",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
 			[
 				"Grunt",
 				"Grunt"
@@ -262,10 +270,10 @@
 	},
 	"file_history":
 	[
-		"/Volumes/Chewy/home/skhavari/Codes/personal/sonos-talk/server.go",
-		"/Volumes/Chewy/home/skhavari/Codes/personal/sonos-talk/Gruntfile.js",
-		"/Volumes/Chewy/home/skhavari/Codes/personal/sonos-talk/sonos-talk.sublime-project",
 		"/Volumes/Chewy/home/skhavari/Codes/personal/sonos-talk/README.md",
+		"/Volumes/Chewy/home/skhavari/Codes/personal/sonos-talk/Gruntfile.js",
+		"/Volumes/Chewy/home/skhavari/Codes/personal/sonos-talk/server.go",
+		"/Volumes/Chewy/home/skhavari/Codes/personal/sonos-talk/sonos-talk.sublime-project",
 		"/Volumes/Chewy/home/skhavari/Codes/personal/sonos-talk/webroot/index.jade",
 		"/Volumes/Chewy/home/skhavari/Codes/personal/sonos-talk/webroot/index.html",
 		"/Volumes/Chewy/home/skhavari/Codes/personal/sonos-talk/testing/sonos.go",

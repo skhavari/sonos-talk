@@ -13,8 +13,16 @@ vizMod.directive('visualizeMicAudio', function() {
   return {
     restrict: 'E',
     replace: 'true',
+    scope: {}, //one per element
     templateUrl: 'visualizer/visualizer.html',
-    link: function(){init();}
+    link: function(scope, element, attrs){
+      //todo: this should be controlled by a style...
+      var barCfg = {};
+      barCfg.barColor = attrs.barColor || '#d42536';
+      barCfg.barWidth = parseInt(attrs.barWidth || '4');
+      barCfg.barGap   = parseInt(attrs.barGap   || '3');
+      init(barCfg);
+    }
   }
 })
 
@@ -39,40 +47,41 @@ function normalizeNames(){
 
 
 // init the mic, wire up audio nodes
-function init(){
+function init(barCfg){
 
-    if (! normalizeNames() ) return;    
+  var self = this;
 
-    temp = document.querySelector("#banner");
+  if (! normalizeNames() ) return;    
 
-    navigator.getUserMedia({audio: true}, onMicReady, function(err){
-        console.log("getUserMedia failed");
-        console.log(err);
-    });
-}
+  temp = document.querySelector("#banner");
 
+  // called when the audio stream is ready for use
+  // wire up all the audio nodes and prepare for animation
+  var onMicReady = function ( stream ){
 
-// called when the audio stream is ready for use
-// wire up all the audio nodes and prepare for animation
-function onMicReady( stream ){
+      // create an audio context
+      audioContext = new webkitAudioContext();
 
-    // create an audio context
-    audioContext = new webkitAudioContext();
+      // create an alayser
+      analyser = audioContext.createAnalyser();
 
-    // create an alayser
-    analyser = audioContext.createAnalyser();
+      // create the microphone media stream source
+      microphone = audioContext.createMediaStreamSource(stream);
 
-    // create the microphone media stream source
-    microphone = audioContext.createMediaStreamSource(stream);
+      // connect the mcrophone input to the analyser node
+      microphone.connect(analyser);
 
-    // connect the mcrophone input to the analyser node
-    microphone.connect(analyser);
+      //setup the visualizer
+      var viz = new simpleViz(barCfg);
 
-    //setup the visualizer
-    var viz = new simpleViz();
+      //init the visualizer
+      new doVisualizer( viz['update'], analyser );
+  }
 
-    //init the visualizer
-    new doVisualizer( viz['update'], analyser );
+  navigator.getUserMedia({audio: true}, onMicReady, function(err){
+      console.log("getUserMedia failed");
+      console.log(err);
+  });
 }
 
 
@@ -106,16 +115,16 @@ function doVisualizer(visualization, analyser) {
 
 
 // does the vizualization of the data
-function simpleViz() {
+function simpleViz(barCfg) {
   
   var self = this;
   this.canvas = document.querySelector('#viz-canvas');
   this.ctx = this.canvas.getContext("2d");
   this.copyCtx = document.querySelector('#viz-canvas-copy').getContext("2d");
   
-  this.ctx.fillStyle = '#d42536';
-  this.barWidth = 4;
-  this.barGap = 3;
+  this.ctx.fillStyle = barCfg.barColor;
+  this.barWidth = barCfg.barWidth;
+  this.barGap = barCfg.barGap;
 
   //to compensate for voices being predominantly much lower pitch
   //pretend like there are nFudge more bars, but only paint the first 1/nFudge
