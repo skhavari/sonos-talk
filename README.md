@@ -1,6 +1,13 @@
 ![Screenshot](https://raw.githubusercontent.com/skhavari/sonos-talk/master/websrc/assets/screenshot.png)
 
-Control Sonos with voice commands
+**Description:** Control Sonos with voice commands
+
+**Why:** Explore [AngularJS][angular], [Web Audio][h5a] & [Web Speech][h5s], [Go][go]
+
+[angular]: https://angularjs.org/
+[h5a]: http://www.w3.org/TR/webaudio/
+[h5s]: https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html
+[go]: http://golang.org
 
 ### Status
 
@@ -8,7 +15,7 @@ Control Sonos with voice commands
 * basic server/client framework up
 * grunt build w/o
 * visualizing microphone input
-* voice input not being processed yet
+* listen for speech input and display recognized text for debugging
 * investigating sonos/ssdp/upnp go libraries
 
 ### Goal - Say Things Like...
