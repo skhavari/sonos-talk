@@ -15,58 +15,59 @@ function SpeechRecognizer() {
 	var self = this;
 	var started = false;
 	
-	self.speechRecognition = new webkitSpeechRecognition();
-	self.speechRecognition.continuous = false;
-	self.speechRecognition.interimResults = false;
+	var speechRecognition = new webkitSpeechRecognition();
+	speechRecognition.continuous = false;
+	speechRecognition.interimResults = false;
 
-	self.speechRecognition.onaudiostart = function(){
+	speechRecognition.onaudiostart = function(){
 		console.log("listening...");
 	};
-	self.speechRecognition.onsoundstart = function(){
+	speechRecognition.onsoundstart = function(){
 		console.log("i hear something...");
 	};
-	self.speechRecognition.onspeechstart = function(event){
+	speechRecognition.onspeechstart = function(event){
 		console.log("its you talking....");
 	};
-	self.speechRecognition.onspeechend = function(){
+	speechRecognition.onspeechend = function(){
 		console.log("you finished talking...");
 	};
-	self.speechRecognition.onsoundend = function(){
+	speechRecognition.onsoundend = function(){
 		console.log("its quiet now....");
 	};
-	self.speechRecognition.onaudioend = function(){
+	speechRecognition.onaudioend = function(){
 		console.log("plugging my ears...");
 	};
-	self.speechRecognition.onresult = function(event){
+	speechRecognition.onresult = function(event){
 		for( var r = event.resultIndex; r < event.results.length; r++ ){
 			console.log("***********************    " + event.results[r][0].transcript);
 		}
 	};
-	self.speechRecognition.onerror = function(event){
+	speechRecognition.onerror = function(event){
 		console.log("SR: error");
 		console.log(event);
 	};
-	self.speechRecognition.onend = function(){
+	speechRecognition.onend = function(){
 		if( started )
-			self.speechRecognition.start();
+			speechRecognition.start();
 	};
 
 
 
-
+	// start recognizer
 	self.start = function(){
 		started = true;
-		self.speechRecognition.start();
+		speechRecognition.start();
 	}
+
 	//stop now, and try to convert the existing sound buffer
 	self.stop = function(){
 		started = false;
-		self.speechRecognition.stop();
+		speechRecognition.stop();
 	}
 
 	//stop immediatly
 	self.abort = function(){
 		started = false;
-		self.speechRecognition.abort();
+		speechRecognition.abort();
 	}
 }
