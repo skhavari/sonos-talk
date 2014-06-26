@@ -15,7 +15,8 @@ html
 
     body(ng-app="sonosTalkApp")
 
-        #banner.container-fluid
+        #banner.container-fluid(ng-controller="speechRecognitionCtrl", style="color: white;")
+            {{ recognizedText }}
 
         #header.container.text-center
             .row
