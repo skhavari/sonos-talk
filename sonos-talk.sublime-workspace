@@ -87,7 +87,7 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 187.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
@@ -270,6 +270,11 @@
 	},
 	"file_history":
 	[
+		"/Volumes/Chewy/home/skhavari/Codes/personal/sonos-talk/websrc/index.jade",
+		"/Volumes/Chewy/home/skhavari/Codes/personal/sonos-talk/websrc/visualizer/visualizer.js",
+		"/Volumes/Chewy/home/skhavari/Codes/personal/sonos-talk/websrc/visualizer/visualizer.jade",
+		"/Volumes/Chewy/home/skhavari/Codes/personal/sonos-talk/webroot/visualizer/visualizer.js",
+		"/Volumes/Chewy/home/skhavari/Codes/personal/sonos-talk/webroot/visualizer/visualizer.html",
 		"/Volumes/Chewy/home/skhavari/Codes/personal/sonos-talk/README.md",
 		"/Volumes/Chewy/home/skhavari/Codes/personal/sonos-talk/Gruntfile.js",
 		"/Volumes/Chewy/home/skhavari/Codes/personal/sonos-talk/server.go",
@@ -392,12 +397,7 @@
 		"/Volumes/Chewy/home/skhavari/Codes/skrilla/src/service/skrilla-service.js",
 		"/Volumes/Chewy/home/skhavari/Codes/skrilla/src/service/skrilla-service/bin/www",
 		"/Volumes/Chewy/home/skhavari/Codes/skrilla/src/service/bin/gen_api_docs.js",
-		"/Volumes/Chewy/home/skhavari/Codes/skrilla/src/service/bin/gen_api_docs.sh",
-		"/Volumes/Chewy/home/skhavari/Codes/skrilla/service/API.json",
-		"/Volumes/Chewy/home/skhavari/.bash_profile",
-		"/Volumes/Chewy/home/skhavari/Codes/hato-client/hato-client.js",
-		"/Volumes/Chewy/home/skhavari/Cloud Files/Google Drive/Northstar/Mint Transaction Categorys",
-		"/Volumes/Chewy/home/skhavari/Documents/Virtual Machines.localized/VMware-OSX.vmwarevm/VMware-OSX.vmx"
+		"/Volumes/Chewy/home/skhavari/Codes/skrilla/src/service/bin/gen_api_docs.sh"
 	],
 	"find":
 	{
@@ -544,6 +544,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"vis",
+				"websrc/visualizer/visualizer.js"
+			],
 			[
 				"st",
 				"webroot/style.styl"
