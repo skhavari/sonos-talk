@@ -33,7 +33,7 @@
  * `git clone https://github.com/skhavari/sonos-talk.git`
  * `cd sonos-talk`
  * `npm install`
- * `go get "github.com/ianr0bkny/go-sonos`
+ * `go get github.com/ianr0bkny/go-sonos`
  * `go run server.go` to start the server
  * `grunt` to build the client
  * `https://localhost:8443` to open the client
