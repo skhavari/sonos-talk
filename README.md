@@ -11,12 +11,13 @@
 
 ### Status
 
-* just started, don't expect much
+* basics aren't there yet...
 * basic server/client framework up
-* grunt build w/o
+* grunt build
 * visualizing microphone input
-* listen for speech input and display recognized text for debugging
-* investigating sonos/ssdp/upnp go libraries
+* listen for speech input and display recognized text on the page
+* detect sonos zone players on startup
+* up next: find all sonos, simple sonos rest api, ui sugar
 
 ### Goal - Say Things Like...
 
@@ -29,15 +30,16 @@
 ### Getting Started
 
  * git, grunt, npm, go are required
- * `git clone https://github.com/skhavari/sonos-talk.git` to get the codes
+ * `git clone https://github.com/skhavari/sonos-talk.git`
  * `cd sonos-talk`
  * `npm install`
+ * `go get "github.com/ianr0bkny/go-sonos`
  * `go run server.go` to start the server
  * `grunt` to build the client
  * `https://localhost:8443` to open the client
 
-
 ### Tested Environments
+
 * Chrome 35 on Mac OS 10.9.3
 * Chrome 35 on Android 4.4.2 on SM-N900V
 * ~~Safari or Chrome on iOS 6~~ **not working**
