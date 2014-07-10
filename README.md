@@ -1,6 +1,4 @@
-![Screenshot](https://raw.githubusercontent.com/skhavari/sonos-talk/master/websrc/assets/screenshot.png)
-
-<iframe width="560" height="315" src="//www.youtube.com/embed/6ukosPxiMNA" frameborder="0" allowfullscreen></iframe>
+[![Screenshot](https://raw.githubusercontent.com/skhavari/sonos-talk/master/websrc/assets/screenshot.png)](https://www.youtube.com/watch?v=6ukosPxiMNA)
 
 **Description:** Control Sonos with voice commands
 
