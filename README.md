@@ -1,5 +1,7 @@
 ![Screenshot](https://raw.githubusercontent.com/skhavari/sonos-talk/master/websrc/assets/screenshot.png)
 
+<iframe width="560" height="315" src="//www.youtube.com/embed/6ukosPxiMNA" frameborder="0" allowfullscreen></iframe>
+
 **Description:** Control Sonos with voice commands
 
 **Why:** Explore [AngularJS][angular], [Web Audio][h5a] & [Web Speech][h5s], [Go][go]
