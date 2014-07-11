@@ -1,4 +1,4 @@
-[![Screenshot](https://raw.githubusercontent.com/skhavari/sonos-talk/master/websrc/assets/screenshot.png)](https://www.youtube.com/watch?v=6ukosPxiMNA)
+[![Screenshot](https://raw.githubusercontent.com/skhavari/sonos-talk/master/websrc/assets/screenshot.png)](https://www.youtube.com/watch?v=5-QxEMNEzmA)
 
 **Description:** Control Sonos with voice commands
 
