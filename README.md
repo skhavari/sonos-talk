@@ -30,13 +30,13 @@
 ### Getting Started
 
  * git, grunt, npm, go are required
- * `git clone https://github.com/skhavari/sonos-talk.git`
- * `cd sonos-talk`
+ * `go get github.com/skhavari/sonos-talk`
+ * `cd $GOPATH/src/github.com/skhavari/sonos-talk`
  * `npm install`
- * `go get github.com/ianr0bkny/go-sonos`
- * `go run server.go` to start the server
+ * `sonos-talk` to start the server (assumes GOPATH/bin is in your PATH)
  * `grunt` to build the client
  * `https://localhost:8443` to open the client
+ * You may need to turn IPV6 off on mac, go-sonos (dependency doesn't currently support it): `networksetup setv6off Wi-Fi`
 
 ### Tested Environments
 
